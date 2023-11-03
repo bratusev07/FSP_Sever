@@ -57,6 +57,14 @@ class Controller{
         }
     }
    
+    async getUserDB(req, res, next){
+        try{
+            const result = await service.getUserDB();
+            res.json(result);
+        }catch(e){
+            res.json(e);
+        }
+    }
 }
 
 module.exports = new Controller();
