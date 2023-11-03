@@ -8,4 +8,5 @@ router.get('/disk-status', controller.diskStatus);
 router.get('/add-user', controller.addUser);
 router.get('/?', controller.help);
 
+router.post('/create-db', controller.createDB)
 module.exports = router;

@@ -46,6 +46,16 @@ class Controller{
             res.json(e);
         }
     }
+
+    async createDB(req, res, next){
+        try{
+            const { databaseName, databaseUser, databasePassword} = req.body;
+            const result = await service.createDB(databaseName, databaseUser);
+            res.json(result);
+        }catch(e){
+            res.json(e);
+        }
+    }
    
 }
 
