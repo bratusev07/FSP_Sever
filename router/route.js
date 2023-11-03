@@ -2,6 +2,10 @@ const Router = require('express').Router;
 const controller = require('../controllers/controller');
 const router = new Router();
 
-router.get('/login', controller.login);
+router.get('/test', controller.test);
+router.get('/server-status', controller.serverStatus);
+router.get('/disk-status', controller.diskStatus);
+router.get('/add-user', controller.addUser);
+router.get('/?', controller.help);
 
 module.exports = router;

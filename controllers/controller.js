@@ -1,13 +1,52 @@
+const service = require('../service/service');
+
 class Controller{
 
-    async login(req, res, next){
+    async test(req, res, next){
         try{
-            res.json(['123', '456'])
+            const result = await service.test();
+            res.json(result);
         }catch(e){
-
+            res.json(e);
         }
     }
 
+    async serverStatus(req, res, next){
+        try{
+            const result = await service.serverStatus();
+            res.json(result);
+        }catch(e){
+            res.json(e);
+        }
+    }
+
+    async diskStatus(req, res, next){
+        try{
+            const result = await service.diskStatus();
+            res.json(result);
+        }catch(e){
+            res.json(e);
+        }
+    }
+
+    async addUser(req, res, next){
+        try{
+            const result = await service.addUser();
+            res.json(result);
+        }catch(e){
+            res.json(e);
+        }
+    }
+
+    async help(req, res, next){
+        try{
+            const arr = ["test", "status", "disk-status", "add-user"];
+            res.json(arr);
+        }catch(e){
+            res.json(e);
+        }
+    }
+   
 }
 
 module.exports = new Controller();
