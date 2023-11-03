@@ -18,7 +18,7 @@ class Service{
     }
 
     async getUserDB() {
-        return ["База данных №1", "База данных №2", "База данных №3", "База данных №4"];
+        return ["DataBase1", "DataBase2", "DataBase3", "DataBase4"];
     }
 
     async createDB(databaseName, databaseUser) {
