@@ -40,7 +40,7 @@ class Controller{
 
     async help(req, res, next){
         try{
-            const arr = ["test", "status", "disk-status", "add-user"];
+            const arr = ["test", "status", "disk_status", "add_user"];
             res.json(arr);
         }catch(e){
             res.json(e);
